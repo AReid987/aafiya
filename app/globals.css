@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Caveat-Regular';
-  src: url('/fonts/Caveat-Regular.ttf') format('truetype');
+  src: url('/fonts/Zapfino.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,8 +16,8 @@
   font-style: normal;
 }
 
-body {
-  font-family: 'Caveat-Regular', sans-serif;
+poem-text {
+  font-family: 'Zapfino', sans-serif;
 }
 
 h1 {

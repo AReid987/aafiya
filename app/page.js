@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NotebookScene from './src/NotebookScene';
+import { Canvas } from '@react-three/fiber';
 
 const quotesData = {
     "quotes": [
@@ -74,26 +75,27 @@ export default function Home() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-zinc-950 text-zinc-900 p-8">
-            <div
-                id="quote-container"
-                className="absolute top-5 left-5 p-5 bg-white/80 rounded-lg text-center text-zinc-800 opacity-0 transition-opacity duration-1000 text-xl"
-            >
-                <p id="quote-text" className="mb-2">{quotesData.quotes[currentIndex].quote}</p>
-                <p id="quote-author" className="text-right italic text-sm text-zinc-500">{quotesData.quotes[currentIndex].author}</p>
-            </div>
             <h1 className="text-6xl font-bold bg-gradient-to-r from-zinc-400 to-zinc-600 bg-clip-text text-transparent animate-text mb-8">
                 Aafiya
             </h1>
-            <p className="text-lg mb-8 text-zinc-400">
+            <p className="text-lg mb-8 text-zinc-400 poem-text">
                 Vigor. Vitality. <br />
                 Health. Freedom from illness. <br />
                 To forgive. To cure.
             </p>
-            <Link href="/anthology/poem1" className="glass-card">
+            {/* <Link href="/anthology/poem1" className="glass-card">
                 Anthology One
-            </Link>
-            <NotebookScene />
-
+            </Link> */}
+            <div
+                id="quote-container"
+                className="glass-card opacity-50 mt-8 p-5 rounded-lg text-center text-zinc-200 transition-opacity duration-1000 text-xl"
+            >
+                <p id="quote-text" className="mb-2">{quotesData.quotes[currentIndex].quote}</p>
+                <p id="quote-author" className="text-right italic text-sm text-zinc-200">{quotesData.quotes[currentIndex].author}</p>
+            </div>
+            <Canvas>
+                <NotebookScene />
+            </Canvas>
         </div>
     );
 }
