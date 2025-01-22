@@ -11,9 +11,6 @@ importers:
       '@needle-tools/engine':
         specifier: 4.1.0-experimental.13
         version: 4.1.0-experimental.13(open@10.1.0)
-      '@next/font':
-        specifier: ^13.4.19
-        version: 13.5.8
       '@react-three/fiber':
         specifier: ^8.17.12
         version: 8.17.12(@needle-tools/three@0.169.3)(@types/react@19.0.7)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -142,9 +139,6 @@ packages:
 
   '@next/eslint-plugin-next@13.4.19':
     resolution: {integrity: sha512-N/O+zGb6wZQdwu6atMZHbR7T9Np5SUFUjZqCbj0sXm+MwQO35M8TazVB4otm87GkXYs2l6OPwARd3/PUWhZBVQ==}
-
-  '@next/font@13.5.8':
-    resolution: {integrity: sha512-ITORq3Sw95OWNxUxgLICXKmeKFh7K5d+w1v+vO4cOZz6i2taUer/77zVxTZExmk72bD9P5lahkgunjS8ej24DA==}
 
   '@next/swc-darwin-arm64@13.4.19':
     resolution: {integrity: sha512-vv1qrjXeGbuF2mOkhkdxMDtv9np7W4mcBtaDnHU+yJG+bBwa6rYsYSCI/9Xm5+TuF5SbZbrWO6G1NfTh1TMjvQ==}
@@ -1943,8 +1937,6 @@ snapshots:
   '@next/eslint-plugin-next@13.4.19':
     dependencies:
       glob: 7.1.7
-
-  '@next/font@13.5.8': {}
 
   '@next/swc-darwin-arm64@13.4.19':
     optional: true
