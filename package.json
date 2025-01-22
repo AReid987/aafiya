@@ -12,7 +12,7 @@
     "@needle-tools/engine": "4.1.0-experimental.13",
     "@react-three/fiber": "^8.17.12",
     "framer-motion": "^10.16.4",
-    "next": "13.4.19",
+    "next": "14.2.21",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
