@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Caveat-Regular';
+  src: url('/fonts/Caveat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SwankyandMooMoo';
+  src: url('/fonts/SwankyandMooMoo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Caveat-Regular', sans-serif;
+}
+
+h1 {
+  font-family: 'SwankyandMooMoo', cursive;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1); /* More transparent */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px; /* Bigger */
+  margin-top: 20px;
+  cursor: pointer; /* Indicate it's clickable */
+  color: white; /* Light text color */
+}

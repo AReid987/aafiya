@@ -1,0 +1,78 @@
+module.exports = {
+      content: [
+        './app/**/*.{js,ts,jsx,tsx,mdx}',
+        './pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './components/**/*.{js,ts,jsx,tsx,mdx}',
+      ],
+      theme: {
+        extend: {
+          colors: {
+            'medium_slate_blue': {
+              DEFAULT: '#8b5cf6',
+              100: '#160340',
+              200: '#2b0780',
+              300: '#410ac0',
+              400: '#5b1af3',
+              500: '#8b5cf6',
+              600: '#a17bf8',
+              700: '#b89cfa',
+              800: '#d0bdfc',
+              900: '#e7defd',
+            },
+            'folly': {
+              DEFAULT: '#f43f5e',
+              100: '#3a030c',
+              200: '#740719',
+              300: '#ae0a25',
+              400: '#e70d32',
+              500: '#f43f5e',
+              600: '#f6657d',
+              700: '#f88b9d',
+              800: '#fbb2be',
+              900: '#fdd8de',
+            },
+            'periwinkle': {
+              DEFAULT: '#c9ddff',
+              100: '#00215b',
+              200: '#0043b6',
+              300: '#1168ff',
+              400: '#6ca2ff',
+              500: '#c9ddff',
+              600: '#d2e3ff',
+              700: '#ddeaff',
+              800: '#e9f1ff',
+              900: '#f4f8ff',
+            },
+            'raisin_black': {
+              DEFAULT: '#272727',
+              100: '#080808',
+              200: '#0f0f0f',
+              300: '#171717',
+              400: '#1f1f1f',
+              500: '#272727',
+              600: '#525252',
+              700: '#7d7d7d',
+              800: '#a8a8a8',
+              900: '#d4d4d4',
+            },
+            'vanilla': {
+              DEFAULT: '#efe9ae',
+              100: '#453f0e',
+              200: '#8a7f1b',
+              300: '#cfbe29',
+              400: '#e1d569',
+              500: '#efe9ae',
+              600: '#f2edbe',
+              700: '#f5f2ce',
+              800: '#f9f6df',
+              900: '#fcfbef',
+            },
+            'zinc': {
+              950: "#09090b",
+              900: "#18181b"
+            }
+          },
+        },
+      },
+      plugins: [],
+    };

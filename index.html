@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Made with Needle</title>
+
+    <!-- importmap -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three":  "https://unpkg.com/three/build/three.module.js",
+            "three/": "https://unpkg.com/three/"
+          }
+        }
+    </script>
+    <!-- parcel require must currently defined somewhere for peerjs -->
+    <script> var parcelRequire; </script>
+
+    <!-- the .light version does not include dependencies like Rapier.js (so no physics) to reduce the bundle size, if your project needs physics then just change it to needle-engine.min.js -->
+    <script type="module" src="https://unpkg.com/@needle-tools/engine@3.5.6-alpha/dist/needle-engine.light.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        needle-engine {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: grey;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- load a gltf or glb here as your scene and listen to the finished event to start interacting with it -->
+    <needle-engine src="app/vintage-leather-notebook.glb" loadfinished="onLoaded"></needle-engine>
+
+</body>
+
+<div id="quote-container">
+    <p id="quote-text"></p>
+    <p id="quote-author"></p>
+</div>
+</style>
+
+</head>
+
+<body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Made with Needle</title>
+
+    <!-- importmap -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three":  "https://unpkg.com/three/build/three.module.js",
+            "three/": "https://unpkg.com/three/"
+          }
+        }
+    </script>
+    <!-- parcel require must currently defined somewhere for peerjs -->
+    <script> var parcelRequire; </script>
+
+    <!-- the .light version does not include dependencies like Rapier.js (so no physics) to reduce the bundle size, if your project needs physics then just change it to needle-engine.min.js -->
+    <script type="module" src="https://unpkg.com/@needle-tools/engine@3.5.6-alpha/dist/needle-engine.light.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        needle-engine {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: grey;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- load a gltf or glb here as your scene and listen to the finished event to start interacting with it -->
+    <needle-engine src="app/vintage-leather-notebook.glb" loadfinished="onLoaded"></needle-engine>
+
+</body>
+
+<style>
+    #quote-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border-radius: 8px;
+        font-size: 1.2em;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    #quote-text {
+        margin-bottom: 10px;
+    }
+
+    #quote-author {
+        text-align: right;
+        font-style: italic;
+        font-size: 0.9em;
+        color: #ccc;
+    }
+</style>
+
+</head>
+
+<body>
+
+<script>
+    let quotes = [];
+    const quoteContainer = document.getElementById('quote-container');
+    const quoteText = document.getElementById('quote-text');
+    const quoteAuthor = document.getElementById('quote-author');
+    let currentIndex = 0;
+
+    (async function() {
+        const response = await fetch('app/quotes.json');
+        const data = await response.json();
+        quotes = data.quotes;
+        showQuote();
+        setInterval(nextQuote, 5000);
+    })();
+
+    function showQuote() {
+        quoteText.textContent = quotes[currentIndex].quote;
+        quoteAuthor.textContent = '- ' + quotes[currentIndex].author;
+        quoteContainer.style.opacity = 1;
+    }
+
+    function hideQuote() {
+        quoteContainer.style.opacity = 0;
+    }
+
+    function nextQuote() {
+        hideQuote();
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % quotes.length;
+            showQuote();
+        }, 1000); // Wait for the fade-out transition
+    }
+</script>
+
+<style>
+    #quote-container {
+        transition: opacity 1s;
+    }
+</style>
+
+</html>
