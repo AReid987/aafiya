@@ -1,3 +1,4 @@
+
 module.exports = {
       content: [
         './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -6,6 +7,12 @@ module.exports = {
       ],
       theme: {
         extend: {
+          fontFamily: {
+            caveat: ['Caveat', 'cursive'],
+            caveat_regular: ['Caveat-Regular', 'sans-serif'],
+            swankyandmoomoo: ['SwankyandMooMoo', 'cursive'],
+            zapfino: ['Zapfino', 'cursive'],
+          },
           colors: {
             'medium_slate_blue': {
               DEFAULT: '#8b5cf6',
@@ -74,5 +81,6 @@ module.exports = {
           },
         },
       },
-      plugins: [],
+      plugins: [
+      ],
     };
